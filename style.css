@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+.popup-container {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('google-map.png') ;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.popup-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 96%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  margin: 0;
+}
+
+
+
+.popup-form input{
+  width: 100%;
+  padding-bottom: 20px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border: none;
+  border-bottom: 2px solid rgb(223, 220, 220);
+}
+.popup-form input[type="text"]{
+ padding-bottom: 60px;
+  
+}
+.popup-form label {
+ color: #888;
+ font-size: small;
+
+}
+.inner-container{
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  overflow: none;
+  width: 80%;
+}
+.inner-container h2{
+  font-size: 30px;
+
+}
+.popup-form button {
+  width: 120px;
+  border-radius: 50px;
+  padding: 10px;
+  background: #fd4b59;
+  color: white;
+  border: none;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+
+#closePopup{
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #f9f0f0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-row label {
+  min-width: 80px;
+  margin-right: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+
+input {
+  outline-offset: unset;
+  outline: none;
+  border: none;
+
+}
+
+
+input::placeholder {
+  color: #888;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 16px;
+
+
+
+}
+
+.call-center-row {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-end;
+  width: 100%;
+  gap: 12px;
+  margin-top: 55px;
+  color: #888;
+
+}
+.call-center-row h4{
+  color: #fd4b59;
+}
+
+@media screen and (max-width: 768px) {
+  .popup-form {
+    width: 90%;
+    height: 90%;
+  }
+  .popup-container h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+ .popup-form button {
+   width: 80px;
+   font-size: 12px;
+   margin-top: 20px;
+ }
+  .inner-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row .form-group {
+    width: 100%;
+  }
+  .call-center-row{
+    font-size: 12px;
+  }
+}
